@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Member Upgrade Open House - August 24 to 31 - Columbia Association</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* VERIFY against the CA web brand kit - sampled from the Countdown to Summer page */
+  --ca-blue:#0F76BE;
+  --ca-blue-dark:#0B5E99;
+  --ca-red:#D0342C;
+  --ca-red-dark:#B32A23;
+  --ca-green:#3A7D3A;
+  --ink:#1E2A33;
+  --muted:#5B6873;
+  --rule:#DCE3E9;
+  --wash:#F2F6F9;
+  --wrap:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
+a{color:var(--ca-blue)}
+:focus-visible{outline:3px solid var(--ca-red);outline-offset:3px}
+img{max-width:100%;display:block}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.012em;margin:0}
+h1{font-size:clamp(34px,4.4vw,50px);line-height:1.1}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15}
+h3{font-size:22px;line-height:1.25}
+p{margin:0 0 18px}
+p:last-child{margin-bottom:0}
+
+/* ---------- header ---------- */
+.masthead{background:var(--ca-blue);padding:26px 0 22px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px;color:#fff}
+.logo .glyph{
+  width:52px;height:52px;flex:none;
+  border:2px solid rgba(255,255,255,.85);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;letter-spacing:.04em;
+  text-align:center;line-height:1.1;
+}
+.logo .name{font-size:29px;font-weight:600;line-height:1.02;letter-spacing:-.02em}
+.logo .name span{display:block;font-weight:400;font-size:23px}
+.masthead .tel{color:#fff;font-size:21px;font-weight:600;text-decoration:none;letter-spacing:.01em}
+
+/* ---------- photo triptych ---------- */
+.triptych{display:grid;grid-template-columns:repeat(3,1fr)}
+.shot{
+  position:relative;
+  background:var(--wash);
+  border-right:2px solid #fff;
+  min-height:300px;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.shot:last-child{border-right:0}
+.shot .ph{
+  text-align:center;
+  color:#7C8B99;
+  font-size:12.5px;
+  font-weight:500;
+  letter-spacing:.05em;
+  max-width:26ch;
+}
+.shot .ph b{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;color:#A3B1BE;margin-bottom:8px}
+
+/* ---------- anchor bar ---------- */
+.anchorbar{background:var(--ca-blue);color:#fff;text-align:center;padding:15px 0}
+.anchorbar strong{font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* ---------- lead block ---------- */
+.lead{padding:56px 0 64px}
+.lead .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+.lead h1{margin-bottom:22px}
+.lead .kicker{
+  font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ca-blue);margin-bottom:14px;
+}
+.lead .sub{font-size:18.5px;color:var(--muted);margin-bottom:24px}
+.lead .runin{font-weight:600;margin-bottom:10px}
+.lead ul{margin:0 0 24px;padding-left:22px}
+.lead li{margin-bottom:9px}
+.lead li b{font-weight:600}
+.lead .note{
+  border-left:4px solid var(--ca-blue);
+  background:var(--wash);
+  padding:16px 20px;
+  font-size:15.5px;
+  color:var(--muted);
+}
+.lead .note b{color:var(--ink);font-weight:600}
+
+/* ---------- form ---------- */
+/* ---------- action panel ---------- */
+.action{border:2px solid var(--ca-blue);padding:0}
+.action .a-top{background:var(--ca-blue);color:#fff;padding:16px 24px}
+.action .a-top h3{font-size:19px;margin:0}
+.action .a-body{padding:24px}
+.action .a-step{margin-bottom:22px}
+.action .a-num{
+  font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ca-blue);margin-bottom:7px;
+}
+.action .a-h{font-size:19px;font-weight:600;line-height:1.3;margin-bottom:7px}
+.action .a-p{font-size:15px;color:var(--muted);margin:0}
+.action hr{border:0;border-top:1px solid var(--rule);margin:22px 0}
+.action .btn{width:100%;text-align:center}
+.action .a-tel{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:9px 0;border-bottom:1px solid var(--rule);font-size:15px;
+}
+.action .a-tel:last-of-type{border-bottom:0}
+.action .a-tel span{color:var(--muted)}
+.action .a-tel a{font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* ---------- club contact block ---------- */
+.clubs{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.club{border-top:3px solid var(--ca-blue);padding-top:18px}
+.club h3{font-size:20px;margin-bottom:6px}
+.club p{font-size:15px;color:var(--muted);margin-bottom:12px}
+.club a.num{font-size:22px;font-weight:600;text-decoration:none;display:inline-block}
+.club a.num.email{font-size:16px;line-height:1.4;word-break:break-word}
+.club .btn{margin-top:2px}
+
+.formcol{border:1px solid var(--rule);padding:26px}
+.f{margin-bottom:13px}
+.f label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:5px}
+.f label i{color:var(--ca-red);font-style:normal}
+.f input,.f select{
+  width:100%;font-family:inherit;font-size:16px;
+  padding:12px 13px;border:1px solid #C4CFD8;border-radius:3px;background:#fff;color:var(--ink);
+}
+.f input:focus,.f select:focus{border-color:var(--ca-blue);outline:2px solid rgba(15,118,190,.2)}
+.btn{
+  display:inline-block;font-family:inherit;font-size:16px;font-weight:600;
+  padding:14px 30px;border:0;border-radius:4px;cursor:pointer;text-decoration:none;
+  transition:background .15s ease;
+}
+.btn-red{background:var(--ca-red);color:#fff}
+.btn-red:hover{background:var(--ca-red-dark)}
+.btn-blue{background:var(--ca-blue);color:#fff}
+.btn-blue:hover{background:var(--ca-blue-dark)}
+.btn-outline{background:#fff;color:var(--ca-blue);box-shadow:inset 0 0 0 2px var(--ca-blue)}
+.btn-outline:hover{background:var(--wash)}
+
+/* ---------- section frame ---------- */
+.sec{padding:64px 0}
+.sec-wash{background:var(--wash)}
+.sec > .wrap > h2{margin-bottom:14px}
+.sec .deck{font-size:18px;font-weight:500;max-width:78ch;margin-bottom:38px}
+
+/* ---------- two membership columns ---------- */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.tier > .tierhead{
+  border-bottom:3px solid var(--ca-blue);
+  padding-bottom:12px;margin-bottom:0;
+}
+.tier .tierhead h3{color:var(--ca-blue)}
+.tier .tierhead p{font-size:15px;color:var(--muted);margin:4px 0 0}
+.tier .tiershot{
+  background:#E4EBF1;min-height:250px;
+  display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.tier .tiershot .ph{text-align:center;color:#7C8B99;font-size:12.5px;font-weight:500;max-width:28ch}
+.tier .tiershot .ph b{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;color:#9AA9B6;margin-bottom:8px}
+.tier .cap{font-weight:600;font-size:16px;padding:16px 0 22px;line-height:1.4}
+
+.opens-h{
+  font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ca-green);margin-bottom:12px;
+}
+.have-h{
+  font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:26px 0 12px;
+}
+.tier ul{list-style:none;margin:0;padding:0}
+.tier li{padding:9px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.tier li:last-child{border-bottom:0}
+.tier li b{font-weight:600}
+.tier li span{display:block;font-size:14px;color:var(--muted);line-height:1.45}
+.tier .have li{color:var(--muted)}
+
+.booknote{
+  margin-top:40px;border-left:4px solid var(--ca-blue);background:#fff;
+  padding:20px 24px;font-size:16px;
+}
+.sec-wash .booknote{background:#fff}
+.booknote b{font-weight:600}
+
+/* ---------- offer ---------- */
+.offer{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.offer ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.offer li{padding:15px 0 15px 30px;border-bottom:1px solid var(--rule);position:relative;font-size:16.5px}
+.offer li::before{
+  content:"";position:absolute;left:0;top:23px;width:12px;height:12px;
+  background:var(--ca-green);border-radius:2px;
+}
+.offer li b{font-weight:600}
+.offer li span{display:block;font-size:14.5px;color:var(--muted)}
+
+.paths{border-top:2px solid var(--ca-blue);padding-top:20px}
+.paths .dest-k{
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.paths h3{margin-bottom:14px;color:var(--ca-blue);font-size:26px}
+.paths .pnote{font-size:15.5px;color:var(--muted);margin-bottom:16px}
+
+.deadline{
+  margin-top:28px;background:var(--ca-blue);color:#fff;padding:22px 24px;
+}
+.deadline .dl-k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B6DBF4;margin-bottom:6px}
+.deadline .dl-d{font-size:24px;font-weight:600;line-height:1.2}
+
+/* ---------- fine print ---------- */
+.fine{padding:56px 0 60px;border-top:1px solid var(--rule)}
+.fine h3{margin-bottom:22px}
+.fine .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 52px}
+.fine ul{list-style:none;margin:0;padding:0}
+.fine li{font-size:14.5px;color:var(--muted);padding:11px 0;border-bottom:1px solid var(--rule);line-height:1.55}
+.fine li b{color:var(--ink);font-weight:600}
+
+/* ---------- closing band ---------- */
+.closing{background:var(--ca-blue);color:#fff;text-align:center;padding:64px 0 70px}
+.closing h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:10px}
+.closing .tel{display:inline-block;color:#fff;font-size:32px;font-weight:500;text-decoration:none;margin-bottom:24px}
+.closing p{color:#CFE7F7;font-size:16px;max-width:60ch;margin:0 auto 26px}
+.closing .btn-red{font-size:17px;padding:16px 38px}
+.closing .signoff{
+  margin:28px auto 0;font-size:15px;color:#CFE7F7;max-width:56ch;
+}
+.closing .signoff a{color:#fff;text-decoration:underline;word-break:break-word}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .lead .wrap,.offer,.tiers,.fine .cols{grid-template-columns:1fr;gap:38px}
+  .clubs{grid-template-columns:1fr;gap:26px}
+  .triptych{grid-template-columns:1fr 1fr}
+  .shot:nth-child(3){display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .triptych{grid-template-columns:1fr}
+  .shot{min-height:210px;border-right:0;border-bottom:2px solid #fff}
+  .shot:nth-child(3){display:flex}
+  .masthead .wrap{align-items:flex-start}
+  .sec{padding:48px 0}
+  .lead{padding:40px 0 48px}
+  .closing .tel{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="logo">
+      <span class="glyph" aria-hidden="true">CA<br>logo</span>
+      <span class="name">Columbia<span>Association</span></span>
+    </div>
+    <a class="tel" href="tel:4436569110">443-656-9110</a>
+  </div>
+</header>
+
+<div class="triptych">
+  <div class="shot"><div class="ph"><b>Photo</b>Member on a fitness floor, mid-workout. Play members are seeing this space for the first time.</div></div>
+  <div class="shot"><div class="ph"><b>Photo</b>Outdoor pool in late August, adults and families. 1Fit members are seeing this.</div></div>
+  <div class="shot"><div class="ph"><b>Photo</b>Tennis or pickleball court, late-summer light. Existing library shot works here.</div></div>
+</div>
+
+<div class="anchorbar"><strong>Members only &nbsp;&middot;&nbsp; August 24 to 31</strong></div>
+
+<section class="lead">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Member Upgrade Open House</p>
+      <h1>Your membership, wide open.</h1>
+      <p class="sub">For eight days, every Play and 1Fit member gets full access to all CA Fit&amp;Play amenities. Nothing to sign up for, no appointment, nothing added to your account. Just check in the way you always do.</p>
+
+      <p class="runin">Monday August 24 through Monday August 31:</p>
+      <ul>
+        <li><b>Every facility.</b> Three fitness clubs, the pools, tennis and pickleball courts, the ice rink and Columbia SportsPark.</li>
+        <li><b>Every day of the window,</b> during each facility's normal operating hours.</li>
+        <li><b>No signup and no appointment.</b> Open the CA app and check in as usual.</li>
+        <li><b>Upgrade by August 31</b> and you are treated as a new annual member, with no enrollment fee.</li>
+      </ul>
+
+      <p class="note"><b>One limit worth knowing.</b> Open access covers the facilities themselves. It does not carry the booking and reservation privileges of a Fit&amp;Play membership. If you want a class, a court time or a lane that needs a reservation, ask a membership advocate and they will arrange it for you.</p>
+    </div>
+
+    <div class="action">
+      <div class="a-top"><h3>How to take part</h3></div>
+      <div class="a-body">
+        <div class="a-step">
+          <p class="a-num">Start here</p>
+          <p class="a-h">Just show up.</p>
+          <p class="a-p">Any CA facility, any day from August 24 to 31, during normal operating hours. Open the CA app and check in the way you always do. There is nothing to register for.</p>
+        </div>
+
+        <hr>
+
+        <p class="a-num">Want something booked, or a price?</p>
+        <p class="a-p" style="margin-bottom:14px">Call the membership line. Advocates can reserve a class or a court for you during the open house and tell you what an upgrade would cost.</p>
+        <p class="a-tel"><span>Membership</span><a href="tel:4436569110">443-656-9110</a></p>
+
+        <hr>
+
+        <p class="a-num">Prefer a set time?</p>
+        <p class="a-p" style="margin-bottom:16px">Book a slot on a membership advocate's calendar and they will meet you at the club.</p>
+        <a class="btn btn-red" href="https://columbiaassociation.org/sports-recreation/membership/schedule-a-tour/">Book time with an advocate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-wash">
+  <div class="wrap">
+    <h2>What opens up for you</h2>
+    <p class="deck">Play and 1Fit members are unlocking almost opposite things. Find your membership below.</p>
+
+    <div class="tiers">
+      <div class="tier">
+        <div class="tierhead">
+          <h3>If you have CA Play</h3>
+          <p>Pools, courts, ice and SportsPark today</p>
+        </div>
+        <div class="tiershot"><div class="ph"><b>Photo</b>Fitness floor or a group class in progress. This is the thing Play members do not have.</div></div>
+        <p class="cap">The indoor half of CA opens up: three fitness clubs and drop-in group classes.</p>
+
+        <p class="opens-h">Opens for you August 24 to 31</p>
+        <ul>
+          <li><b>Fitness floors at all three clubs</b><span>Cardio, strength and free weights at Columbia Gym, Supreme Sports Club and the Athletic Club.</span></li>
+          <li><b>Group fitness classes</b><span>Any class that does not require a reservation. An advocate can book the ones that do.</span></li>
+          <li><b>Indoor pools</b><span>Lap swim and open swim at the club pools.</span></li>
+        </ul>
+
+        <p class="have-h">Already included in your membership</p>
+        <ul class="have">
+          <li>Outdoor pools, in season</li>
+          <li>Tennis and pickleball courts</li>
+          <li>Columbia Ice Rink</li>
+          <li>Columbia SportsPark, in season</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <div class="tierhead">
+          <h3>If you have CA 1Fit</h3>
+          <p>One fitness club today</p>
+        </div>
+        <div class="tiershot"><div class="ph"><b>Photo</b>Outdoor pool or courts in use. This is the thing 1Fit members do not have.</div></div>
+        <p class="cap">Everything outdoors opens up, plus the two clubs that are not your home club.</p>
+
+        <p class="opens-h">Opens for you August 24 to 31</p>
+        <ul>
+          <li><b>All three fitness clubs</b><span>Not just your home club. Try the equipment and class schedule at the other two.</span></li>
+          <li><b>Outdoor pools</b><span>Open through the end of the summer season.</span></li>
+          <li><b>Tennis and pickleball courts</b><span>Indoor and outdoor courts across CA.</span></li>
+          <li><b>Columbia Ice Rink</b><span>Public skate sessions.</span></li>
+          <li><b>Columbia SportsPark</b><span>Mini golf, batting cages and the fields.</span></li>
+        </ul>
+
+        <p class="have-h">Already included in your membership</p>
+        <ul class="have">
+          <li>Your home fitness club</li>
+          <li>Group fitness classes at your club</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="booknote"><b>Not sure which membership you have?</b> Check the CA app, or ask at the front desk of any facility and they will tell you in a second.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>If you want to keep it</h2>
+    <p class="deck">We did not build a separate upgrade deal. Upgrade by August 31 and you get the same package a new Fit&amp;Play member gets this month, without the enrollment fee.</p>
+
+    <div class="offer">
+      <ul>
+        <li><b>13 months for the price of 12</b><span>Your first full month is comped.</span></li>
+        <li><b>No prorate on the rest of August</b><span>The balance of this month is waived.</span></li>
+        <li><b>No enrollment fee</b><span>Upgrades never carry one.</span></li>
+        <li><b>A free year of KidSpace</b><span>Supervised play while you work out, for twelve months.</span></li>
+        <li><b>A free JumpStart session</b><span>Book it with a trainer once your upgrade is active.</span></li>
+        <li><b>Eligible for the $99 Value-Added Package</b><span>Ask an advocate what is included.</span></li>
+      </ul>
+
+      <div class="paths">
+        <p class="dest-k">Where you land</p>
+        <h3>CA Fit&amp;Play, annual</h3>
+        <p class="pnote">One membership that covers everything you have been using this week. All three fitness clubs, the pools, the courts, the ice rink and Columbia SportsPark, on one account, all year.</p>
+        <p class="pnote">Whatever you have today, a membership advocate will handle the change and confirm your rate. It takes one conversation, in person at any club or over the phone.</p>
+        <div class="deadline">
+          <p class="dl-k">Deadline</p>
+          <p class="dl-d">Monday, August 31 at close of business</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-wash">
+  <div class="wrap">
+    <h2>Talk to a membership advocate</h2>
+    <p class="deck">Three ways to reach one, whichever suits you.</p>
+
+    <div class="clubs">
+      <div class="club">
+        <h3>Call us</h3>
+        <p>Reserve a class or a court during the open house, or ask what an upgrade would cost.</p>
+        <a class="num" href="tel:4436569110">443-656-9110</a>
+      </div>
+      <div class="club">
+        <h3>Book a time</h3>
+        <p>Get on an advocate's calendar and they will meet you at the club you choose.</p>
+        <a class="btn btn-red" href="https://columbiaassociation.org/sports-recreation/membership/schedule-a-tour/">Book time with an advocate</a>
+      </div>
+      <div class="club">
+        <h3>Email a question</h3>
+        <p>June Palmer, Director of Membership Sales, will answer anything specific about your membership.</p>
+        <a class="num email" href="mailto:June.Palmer@columbiaassociation.org">June.Palmer@columbiaassociation.org</a>
+      </div>
+    </div>
+
+    <p class="booknote"><b>Or just ask in person.</b> Membership advocates are on site at all three fitness clubs throughout the open house. Stop by the front desk and ask for one.</p>
+  </div>
+</section>
+
+<section class="fine">
+  <div class="wrap">
+    <h3>The details</h3>
+    <div class="cols">
+      <ul>
+        <li><b>Who this is for.</b> Current CA Play and CA 1Fit members with an active membership in good standing. This is not a public offer.</li>
+        <li><b>Access window.</b> Monday August 24 through Monday August 31, during each facility's normal operating hours.</li>
+        <li><b>Reservations.</b> Open house access does not include booking privileges. Reservations are arranged manually by a membership advocate.</li>
+        <li><b>Upgrade deadline.</b> Upgrades must be completed by close of business Monday August 31.</li>
+        <li><b>Promotional benefits.</b> The comped first month, the waived August prorate, the free year of KidSpace, the free JumpStart session and eligibility for the $99 Value-Added Package are available on new annual CA Fit&amp;Play memberships only.</li>
+      </ul>
+      <ul>
+        <li><b>Already in a contract.</b> If you are part way through a current membership term, you can still upgrade. A membership advocate will walk you through it.</li>
+        <li><b>Golf.</b> Golf memberships are not included in this open house.</li>
+        <li><b>Facility notes.</b> The Women's Gym at Columbia Gym is closed for renovation from August 21. Equipment is being rotated at all three fitness clubs during the week of August 24. The lower parking lot at Supreme Sports Club is closed August 31.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>Come see the rest of it.</h2>
+    <p>Eight days, every facility, on the membership you already have. Walk into any CA facility from August 24 to 31 and check in as usual. Questions, or want something reserved? Call the club you plan to visit.</p>
+    <a class="tel" href="tel:4436569110">443-656-9110</a>
+    <a class="btn btn-red" href="https://columbiaassociation.org/sports-recreation/membership/schedule-a-tour/">Book time with an advocate</a>
+    <p class="signoff">Something specific about your membership? Email June Palmer, Director of Membership Sales, at <a href="mailto:June.Palmer@columbiaassociation.org">June.Palmer@columbiaassociation.org</a>.</p>
+  </div>
+</section>
+
+</body>
+</html>
